@@ -1,0 +1,37 @@
+\documentclass{article}
+%\usepackage[portuguese]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{amsmath}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage[margin=1in]{geometry}
+\usepackage{indentfirst}
+\usepackage{amsfonts}
+
+\begin{document}
+
+
+\title{Band-pass signal definition}
+\maketitle
+
+The signal power in band-pass representation can be defined in multiple ways. Let us first define the initial signal $S(t)$ and assuming this has a real amplitude $A(t)$:
+
+\begin{equation}
+S(t)=A(t)\cos(\omega t+\theta(t))=\frac{A(t)}{2}\left(e^{i(\omega t+\theta(t))}+e^{-i(\omega t+\theta(t))}\right).
+\end{equation}
+%
+We can now define the band-pass representation signal as:
+
+\begin{equation}
+s(t)=a(t)\cos(\theta(t)) 
+\end{equation}
+
+For simplicity, and with no loss of generality, let us assume that $a(t)=a$ and $A(t)=A$, that is, both are time constant. Let us also assume that $\theta(t)=0$. Using the definition for instant power we get the relation between $a$ and $A$. 
+
+\begin{equation}
+P=\lim_{T \to 0}\frac{1}{T}\int_0^Tdt~S(t)=\frac{A^2}{2}=\left(\frac{A}{\sqrt{2}}\right)^2\Rightarrow a(t)=\frac{A(t)}{\sqrt{2}}
+\end{equation}
+
+\end{document}

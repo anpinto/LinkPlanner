@@ -1,0 +1,53 @@
+\documentclass{article}
+\usepackage[utf8x]{inputenc}
+\usepackage{amsmath}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage[margin=1in]{geometry}
+\usepackage{indentfirst}
+\usepackage{amsfonts}
+
+\begin{document}
+
+\title{Beam splitter}
+\maketitle
+
+Taking into account the definition of the transfer matrix of a beam splitter defined in the reference~\cite{loudon2000quantum}
+\begin{equation}
+\begin{pmatrix}
+r_{13} & t_{23}\\
+t_{14} & r_{24}
+\end{pmatrix}
+\end{equation}
+
+Where $r_{ij}$ and $t_{ij}$ are the reflection and transmission coefficients of the beam splitter. We choose the following relations:
+
+\begin{align}
+|r_{13}|=|r_{24}|&=|r|,\\
+|t_{14}|=|t_{23}|&=|t|,\\
+r_{13}&=|r|e^{\phi_{13}},\\
+r_{24}&=|r|e^{\phi_{24}},\\
+t_{14}&=|t|e^{\phi_{14}},\\
+t_{23}&=|t|e^{\phi_{23}},\\
+|r|=|t|&=\frac{1}{\sqrt{2}},\\
+\phi_{13}=\phi_{14}=\phi_{23}&=0,\\
+\phi_{24}=\pi.
+\end{align}
+
+Assuming the previous relations we obtain the beam splitter matrix presented in~\eqref{eq:matrix}.
+
+\begin{equation}\label{eq:matrix}
+\frac{1}{\sqrt{2}}
+\begin{pmatrix}
+1 & 1\\
+1 & -1
+\end{pmatrix}
+\end{equation}
+
+
+\bibliographystyle{unsrt}
+\bibliography{bibliography}
+
+\end{document}

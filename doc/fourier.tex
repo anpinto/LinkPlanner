@@ -1,0 +1,45 @@
+\documentclass{article}
+\usepackage[utf8x]{inputenc}
+\usepackage{amsmath}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage[margin=1in]{geometry}
+\usepackage{indentfirst}
+\usepackage{amsfonts}
+
+\begin{document}
+
+\title{Fourier transform}
+\maketitle
+
+There are various possible definitions for the Fourier transform. We shall use the definition presented in the reference~\cite{agrawal1992fiber}, presented in~\eqref{eq:Fourier}.
+\begin{subequations}\label{eq:Fourier}
+\begin{align}
+S(\omega)&=\int_{-\infty}^{\infty}dt~s(t)e^{i\omega t}\\
+s(t)&=\frac{1}{2\pi}\int_{-\infty}^{\infty}d\omega~ S(\omega)e^{-i\omega t}.
+\end{align}
+\end{subequations}
+
+We can also define the n-dimensional definition, presented in~\eqref{eq:ndimensional}.
+
+\begin{subequations}\label{eq:ndimensional}
+\begin{align}
+S(\omega)&=\int_{\mathbb{R}^n}dt~s(t)e^{i\omega t}\\
+s(t)&=\left(\frac{1}{2\pi}\right)^n\int_{\mathbb{R}^n}d\omega~S(\omega)e^{-i\omega t}
+\end{align}
+\end{subequations}
+
+It may also prove useful to define the the equivalent discrete Fourier transform~\eqref{eq:discrete}, for a N point function.
+\begin{subequations}\label{eq:discrete}
+\begin{align}
+S(\omega_m)=&\sum_{n=0}^{N-1} s(t_n)e^{i\omega_m t_n}\\
+s(t_n)=\frac{1}{N}&\sum_{m=0}^{N-1}S(\omega_m)e^{-i\omega_m t_n}
+\end{align}
+\end{subequations}
+
+\bibliographystyle{unsrt}
+\bibliography{bibliography}
+
+\end{document}
